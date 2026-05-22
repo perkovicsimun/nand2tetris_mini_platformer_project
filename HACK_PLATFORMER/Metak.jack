@@ -1,0 +1,97 @@
+class Metak {
+    field int x, y, brzina;
+    field boolean aktivan;
+
+
+    constructor Metak new(){
+        let x = 0;
+        let y = 0;
+        let brzina = -9;
+        let aktivan = false;
+        return this;
+        }
+    method void pucanje(int startx, int starty){
+    let x = startx;
+    let y = starty;
+    let aktivan = true;
+    return;
+    }
+    method void update(){
+    if (aktivan) {
+    do erase();
+    let x = x + brzina;
+    if (x < 15 ){
+    do erase();
+        let aktivan = false;}}
+
+    return;}
+    method void draw(){
+    if (aktivan) {
+    do Screen.setColor(true);
+    do Screen.drawCircle(x, y , 5);
+    }return;}
+    method boolean diranje(int px, int py, int psize){
+     var int lijevo, desno, gore, dole;
+
+    if (aktivan) {
+
+        let lijevo = x - 5;
+        let desno = x + 5;
+
+        let gore = y - 5;
+        let dole = y + 5;
+
+        if ((px < desno) &
+            ((px + psize) > lijevo) &
+            (py < dole) &
+            ((py + psize) > gore)) {
+
+            return true;
+        }
+    }
+
+    return false;
+}
+
+method void erase() {
+
+    if (aktivan) {
+
+        do Screen.setColor(false);
+
+        do Screen.drawCircle(x, y, 5);
+    }
+
+    return;
+}
+method boolean jelAktivan() {
+    return aktivan;
+}
+ method void reset() {
+        let aktivan = false;
+        return;
+    }
+        method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+    
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,11 @@
+class Main{
+    function void main() {
+        var Igra igranje;
+
+        let igranje = Igra.new();
+        do igranje.kretanje();
+        do igranje.dispose();
+
+        return;
+    }
+}

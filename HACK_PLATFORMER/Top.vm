@@ -1,0 +1,134 @@
+function Top.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push constant 0
+pop this 2
+push constant 30
+pop this 3
+call Metak.new 0
+pop this 4
+push pointer 0
+return
+function Top.postavi 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push this 4
+call Metak.reset 1
+pop temp 0
+push constant 0
+return
+function Top.update 0
+push argument 0
+pop pointer 0
+push this 2
+push constant 1
+add
+pop this 2
+push this 2
+push this 3
+gt
+push this 4
+call Metak.jelAktivan 1
+not
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 4
+push this 0
+push constant 5
+sub
+push this 1
+push constant 5
+add
+call Metak.pucanje 3
+pop temp 0
+push constant 0
+pop this 2
+label IF_FALSE0
+push this 4
+call Metak.update 1
+pop temp 0
+push constant 0
+return
+function Top.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push constant 12
+add
+push this 1
+push constant 12
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 0
+push constant 8
+sub
+push this 1
+push constant 4
+add
+push this 0
+push this 1
+push constant 8
+add
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+call Metak.draw 1
+pop temp 0
+push constant 0
+return
+function Top.diranjeMetka 0
+push argument 0
+pop pointer 0
+push this 4
+push argument 1
+push argument 2
+push argument 3
+call Metak.diranje 4
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Top.reset 0
+push argument 0
+pop pointer 0
+push constant 0
+pop this 2
+push this 4
+call Metak.reset 1
+pop temp 0
+push constant 0
+return
+function Top.dispose 0
+push argument 0
+pop pointer 0
+push this 4
+call Metak.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

@@ -1,0 +1,1226 @@
+function Igra.new 0
+push constant 18
+call Memory.alloc 1
+pop pointer 0
+push constant 1
+push constant 1
+call Glavni_lik.new 2
+pop this 0
+push constant 0
+push constant 0
+push constant 1
+push constant 1
+call Platforma.new 4
+pop this 4
+push constant 0
+push constant 0
+push constant 1
+push constant 1
+call Platforma.new 4
+pop this 5
+push constant 0
+push constant 0
+push constant 1
+push constant 1
+call Platforma.new 4
+pop this 6
+push constant 0
+push constant 0
+push constant 1
+push constant 1
+call Platforma.new 4
+pop this 7
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 8
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 9
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 10
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 11
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 12
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 13
+push constant 0
+push constant 0
+call Siljak.new 2
+pop this 14
+push constant 0
+push constant 0
+call Top.new 2
+pop this 15
+push constant 0
+push constant 0
+call Top.new 2
+pop this 16
+push constant 0
+push constant 0
+push constant 1
+call Cilj.new 3
+pop this 2
+push constant 0
+not
+pop this 1
+push constant 0
+pop this 3
+push constant 1
+pop this 17
+push pointer 0
+call Igra.ucitajlevel1 1
+pop temp 0
+push pointer 0
+return
+function Igra.ucitajlevel1 0
+push argument 0
+pop pointer 0
+push constant 1
+pop this 17
+push this 0
+push constant 30
+push constant 180
+call Glavni_lik.postavi 3
+pop temp 0
+push this 4
+push constant 100
+push constant 150
+push constant 110
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 5
+push constant 110
+push constant 65
+push constant 120
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 6
+push constant 270
+push constant 115
+push constant 120
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 7
+push constant 395
+push constant 80
+push constant 80
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 8
+push constant 265
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 9
+push constant 340
+push constant 103
+call Siljak.postavi 3
+pop temp 0
+push this 10
+push constant 360
+push constant 103
+call Siljak.postavi 3
+pop temp 0
+push this 11
+push constant 205
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 12
+push constant 225
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 13
+push constant 245
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 14
+push constant 380
+push constant 103
+call Siljak.postavi 3
+pop temp 0
+push this 15
+push constant 490
+push constant 140
+call Top.postavi 3
+pop temp 0
+push this 16
+push constant 490
+push constant 175
+call Top.postavi 3
+pop temp 0
+push this 2
+push constant 440
+push constant 60
+push constant 15
+call Cilj.postavi 4
+pop temp 0
+push pointer 0
+call Igra.resetSvijeta 1
+pop temp 0
+push constant 0
+return
+function Igra.ucitajlevel2 0
+push argument 0
+pop pointer 0
+push constant 2
+pop this 17
+push this 0
+push constant 30
+push constant 180
+call Glavni_lik.postavi 3
+pop temp 0
+push this 4
+push constant 0
+push constant 40
+push constant 120
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 5
+push constant 160
+push constant 80
+push constant 90
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 6
+push constant 300
+push constant 120
+push constant 90
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 7
+push constant 390
+push constant 165
+push constant 80
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 8
+push constant 130
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 9
+push constant 150
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 10
+push constant 250
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 11
+push constant 270
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 12
+push constant 190
+push constant 68
+call Siljak.postavi 3
+pop temp 0
+push this 13
+push constant 330
+push constant 108
+call Siljak.postavi 3
+pop temp 0
+push this 14
+push constant 420
+push constant 153
+call Siljak.postavi 3
+pop temp 0
+push this 15
+push constant 490
+push constant 90
+call Top.postavi 3
+pop temp 0
+push this 16
+push constant 490
+push constant 175
+call Top.postavi 3
+pop temp 0
+push this 2
+push constant 40
+push constant 20
+push constant 15
+call Cilj.postavi 4
+pop temp 0
+push pointer 0
+call Igra.resetSvijeta 1
+pop temp 0
+push constant 0
+return
+function Igra.ucitajlevel3 0
+push argument 0
+pop pointer 0
+push constant 3
+pop this 17
+push this 0
+push constant 30
+push constant 180
+call Glavni_lik.postavi 3
+pop temp 0
+push this 4
+push constant 70
+push constant 150
+push constant 65
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 5
+push constant 180
+push constant 120
+push constant 60
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 6
+push constant 300
+push constant 90
+push constant 55
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 7
+push constant 410
+push constant 60
+push constant 55
+push constant 4
+call Platforma.postavi 5
+pop temp 0
+push this 8
+push constant 95
+push constant 138
+call Siljak.postavi 3
+pop temp 0
+push this 9
+push constant 205
+push constant 108
+call Siljak.postavi 3
+pop temp 0
+push this 10
+push constant 320
+push constant 78
+call Siljak.postavi 3
+pop temp 0
+push this 11
+push constant 145
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 12
+push constant 255
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 13
+push constant 365
+push constant 178
+call Siljak.postavi 3
+pop temp 0
+push this 14
+push constant 430
+push constant 48
+call Siljak.postavi 3
+pop temp 0
+push this 15
+push constant 490
+push constant 135
+call Top.postavi 3
+pop temp 0
+push this 16
+push constant 490
+push constant 75
+call Top.postavi 3
+pop temp 0
+push this 2
+push constant 445
+push constant 35
+push constant 15
+call Cilj.postavi 4
+pop temp 0
+push pointer 0
+call Igra.resetSvijeta 1
+pop temp 0
+push constant 0
+return
+function Igra.resetSvijeta 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+not
+pop this 1
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 191
+push constant 511
+push constant 255
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 8
+call String.new 1
+push constant 86
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 106
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 4
+call Platforma.draw 1
+pop temp 0
+push this 5
+call Platforma.draw 1
+pop temp 0
+push this 6
+call Platforma.draw 1
+pop temp 0
+push this 7
+call Platforma.draw 1
+pop temp 0
+push this 8
+call Siljak.draw 1
+pop temp 0
+push this 9
+call Siljak.draw 1
+pop temp 0
+push this 10
+call Siljak.draw 1
+pop temp 0
+push this 11
+call Siljak.draw 1
+pop temp 0
+push this 12
+call Siljak.draw 1
+pop temp 0
+push this 13
+call Siljak.draw 1
+pop temp 0
+push this 15
+call Top.reset 1
+pop temp 0
+push this 16
+call Top.reset 1
+pop temp 0
+push this 15
+call Top.draw 1
+pop temp 0
+push this 16
+call Top.draw 1
+pop temp 0
+push this 2
+call Cilj.draw 1
+pop temp 0
+push constant 0
+return
+function Igra.dodirivanjeCilja 3
+push argument 0
+pop pointer 0
+push this 0
+call Glavni_lik.getX 1
+pop local 0
+push this 0
+call Glavni_lik.getY 1
+pop local 1
+push this 0
+call Glavni_lik.getsize 1
+pop local 2
+push this 2
+push local 0
+push local 1
+push local 2
+call Cilj.diranje 4
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Igra.dodirivanjeSiljka 3
+push argument 0
+pop pointer 0
+push this 0
+call Glavni_lik.getX 1
+pop local 0
+push this 0
+call Glavni_lik.getY 1
+pop local 1
+push this 0
+call Glavni_lik.getsize 1
+pop local 2
+push this 8
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push this 9
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+not
+return
+label IF_FALSE1
+push this 10
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+return
+label IF_FALSE2
+push this 11
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+not
+return
+label IF_FALSE3
+push this 12
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+not
+return
+label IF_FALSE4
+push this 13
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+return
+label IF_FALSE5
+push this 14
+push local 0
+push local 1
+push local 2
+call Siljak.diranje 4
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+not
+return
+label IF_FALSE6
+push constant 0
+return
+function Igra.pobjeda 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 20
+call Output.moveCursor 2
+pop temp 0
+push constant 25
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 74
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 68
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 75
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 67
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 14
+push constant 20
+call Output.moveCursor 2
+pop temp 0
+push constant 12
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 20
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 122
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 112
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 14
+push constant 20
+call Output.moveCursor 2
+pop temp 0
+push constant 9
+call String.new 1
+push constant 86
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 106
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 3
+call Output.printInt 1
+pop temp 0
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 82
+eq
+not
+not
+if-goto WHILE_END0
+push constant 50
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop this 3
+push pointer 0
+call Igra.ucitajlevel1 1
+pop temp 0
+push constant 0
+return
+function Igra.gameOver 0
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 25
+call Output.moveCursor 2
+pop temp 0
+push constant 13
+call String.new 1
+push constant 73
+call String.appendChar 2
+push constant 90
+call String.appendChar 2
+push constant 71
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 40
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 12
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 21
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 122
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 115
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label WHILE_EXP0
+call Keyboard.keyPressed 0
+push constant 82
+eq
+not
+not
+if-goto WHILE_END0
+push constant 50
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push pointer 0
+call Igra.ucitajlevel1 1
+pop temp 0
+push constant 0
+pop this 3
+push constant 0
+return
+function Igra.drawTimer 0
+push argument 0
+pop pointer 0
+push constant 0
+push constant 10
+call Output.moveCursor 2
+pop temp 0
+push this 3
+call Output.printInt 1
+pop temp 0
+push constant 0
+return
+function Igra.nacrtajsvijet 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 191
+push constant 511
+push constant 255
+call Screen.drawRectangle 4
+pop temp 0
+push this 4
+call Platforma.draw 1
+pop temp 0
+push this 5
+call Platforma.draw 1
+pop temp 0
+push this 6
+call Platforma.draw 1
+pop temp 0
+push this 7
+call Platforma.draw 1
+pop temp 0
+push this 8
+call Siljak.draw 1
+pop temp 0
+push this 9
+call Siljak.draw 1
+pop temp 0
+push this 10
+call Siljak.draw 1
+pop temp 0
+push this 11
+call Siljak.draw 1
+pop temp 0
+push this 12
+call Siljak.draw 1
+pop temp 0
+push this 13
+call Siljak.draw 1
+pop temp 0
+push this 14
+call Siljak.draw 1
+pop temp 0
+push this 2
+call Cilj.draw 1
+pop temp 0
+push constant 0
+return
+function Igra.kretanje 4
+push argument 0
+pop pointer 0
+push pointer 0
+call Igra.resetSvijeta 1
+pop temp 0
+label WHILE_EXP0
+push this 1
+not
+if-goto WHILE_END0
+push this 3
+push constant 1
+add
+pop this 3
+push pointer 0
+call Igra.drawTimer 1
+pop temp 0
+push pointer 0
+call Igra.nacrtajsvijet 1
+pop temp 0
+push this 0
+call Glavni_lik.erase 1
+pop temp 0
+push this 4
+call Platforma.draw 1
+pop temp 0
+push this 8
+call Siljak.draw 1
+pop temp 0
+call Keyboard.keyPressed 0
+pop local 0
+push local 0
+push constant 65
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+call Glavni_lik.idiLijevo 1
+pop temp 0
+label IF_FALSE0
+push local 0
+push constant 68
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+call Glavni_lik.idiDesno 1
+pop temp 0
+label IF_FALSE1
+push local 0
+push constant 87
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 0
+call Glavni_lik.skok 1
+pop temp 0
+label IF_FALSE2
+push local 0
+push constant 81
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 0
+pop this 1
+label IF_FALSE3
+push this 0
+call Glavni_lik.gravitacija 1
+pop temp 0
+push pointer 0
+call Igra.skokNaPlatformu 1
+pop temp 0
+push this 0
+call Glavni_lik.getX 1
+pop local 1
+push this 0
+call Glavni_lik.getY 1
+pop local 2
+push this 0
+call Glavni_lik.getsize 1
+pop local 3
+push pointer 0
+call Igra.dodirivanjeSiljka 1
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push pointer 0
+call Igra.gameOver 1
+pop temp 0
+label IF_FALSE4
+push this 15
+push local 1
+push local 2
+push local 3
+call Top.diranjeMetka 4
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push pointer 0
+call Igra.gameOver 1
+pop temp 0
+label IF_FALSE5
+push this 16
+push local 1
+push local 2
+push local 3
+call Top.diranjeMetka 4
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push pointer 0
+call Igra.gameOver 1
+pop temp 0
+label IF_FALSE6
+push pointer 0
+call Igra.dodirivanjeCilja 1
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 17
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push pointer 0
+call Igra.ucitajlevel2 1
+pop temp 0
+goto IF_END8
+label IF_FALSE8
+push this 17
+push constant 2
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push pointer 0
+call Igra.ucitajlevel3 1
+pop temp 0
+goto IF_END9
+label IF_FALSE9
+push pointer 0
+call Igra.pobjeda 1
+pop temp 0
+label IF_END9
+label IF_END8
+label IF_FALSE7
+push this 15
+call Top.update 1
+pop temp 0
+push this 16
+call Top.update 1
+pop temp 0
+push this 15
+call Top.draw 1
+pop temp 0
+push this 16
+call Top.draw 1
+pop temp 0
+push this 0
+call Glavni_lik.draw 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Igra.skokNaPlatformu 3
+push argument 0
+pop pointer 0
+push this 0
+call Glavni_lik.getX 1
+pop local 0
+push this 0
+call Glavni_lik.getY 1
+pop local 1
+push this 0
+call Glavni_lik.getsize 1
+pop local 2
+push this 4
+push local 0
+push local 1
+push local 2
+push this 0
+call Glavni_lik.getbrzinay 1
+call Platforma.diranjeOdozgo 5
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push this 4
+call Platforma.getY 1
+push local 2
+sub
+call Glavni_lik.promjenapoda 2
+pop temp 0
+label IF_FALSE0
+push this 5
+push local 0
+push local 1
+push local 2
+push this 0
+call Glavni_lik.getbrzinay 1
+call Platforma.diranjeOdozgo 5
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+push this 5
+call Platforma.getY 1
+push local 2
+sub
+call Glavni_lik.promjenapoda 2
+pop temp 0
+label IF_FALSE1
+push this 6
+push local 0
+push local 1
+push local 2
+push this 0
+call Glavni_lik.getbrzinay 1
+call Platforma.diranjeOdozgo 5
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 0
+push this 6
+call Platforma.getY 1
+push local 2
+sub
+call Glavni_lik.promjenapoda 2
+pop temp 0
+label IF_FALSE2
+push this 7
+push local 0
+push local 1
+push local 2
+push this 0
+call Glavni_lik.getbrzinay 1
+call Platforma.diranjeOdozgo 5
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+push this 7
+call Platforma.getY 1
+push local 2
+sub
+call Glavni_lik.promjenapoda 2
+pop temp 0
+label IF_FALSE3
+push constant 0
+return
+function Igra.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Glavni_lik.dispose 1
+pop temp 0
+push this 8
+call Siljak.dispose 1
+pop temp 0
+push this 9
+call Siljak.dispose 1
+pop temp 0
+push this 10
+call Siljak.dispose 1
+pop temp 0
+push this 11
+call Siljak.dispose 1
+pop temp 0
+push this 12
+call Siljak.dispose 1
+pop temp 0
+push this 13
+call Siljak.dispose 1
+pop temp 0
+push this 14
+call Siljak.dispose 1
+pop temp 0
+push this 2
+call Cilj.dispose 1
+pop temp 0
+push this 4
+call Platforma.dispose 1
+pop temp 0
+push this 5
+call Platforma.dispose 1
+pop temp 0
+push this 6
+call Platforma.dispose 1
+pop temp 0
+push this 7
+call Platforma.dispose 1
+pop temp 0
+push this 15
+call Top.dispose 1
+pop temp 0
+push this 16
+call Top.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

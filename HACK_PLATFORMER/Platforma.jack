@@ -1,0 +1,69 @@
+class Platforma {
+    field int x, y, sirina, visina; 
+
+    constructor Platforma new(int xx, int yy, int s, int v){
+    let x = xx;
+    let y = yy;
+    let sirina = s;
+    let visina = v;
+    return this;
+    }
+    method void draw(){
+    do Screen.setColor(true);
+    do Screen.drawRectangle(x, y,x + sirina, y + visina);
+    return;
+    }
+    method boolean diranje(int px, int py, int psize) {
+
+        if ((px < x + sirina) &
+            ((px + psize) > x) &
+            (py < y + visina) &
+            ((py + psize) > y)) {
+
+            return true;
+        }
+
+        return false;
+    }
+    method boolean diranjeOdozgo(int px, int py, int psize, int brzinaY) {
+
+    if (brzinaY > 0) {
+
+        if (((py + psize) > y) &
+            ((py + psize) < (y + 25)) &
+            ((px + psize) > x) &
+            (px < (x + sirina))) {
+
+            return true;
+        }
+    }
+
+    return false;
+}
+method void postavi(int xx, int yy, int ss, int vv) {
+
+    let x = xx;
+    let y = yy;
+    let sirina = ss;
+    let visina = vv;
+
+    return;
+}
+    method int getX(){
+    return x;}
+    method int getY(){
+    return y;}
+    method  int getSirina(){
+    return sirina;}
+    method int getVisina(){
+    return visina;}
+       method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+
+
+
+}

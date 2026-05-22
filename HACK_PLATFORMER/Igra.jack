@@ -1,0 +1,357 @@
+class Igra {
+    field Glavni_lik igrac;
+    field boolean igra_ide;
+    field Cilj cilj1;
+    field int vrijeme;
+    field Platforma platforma1, platforma2, platforma3, platforma4;
+    field Siljak siljak1, siljak2, siljak3, siljak4, siljak5, siljak6, siljak7;
+    field Top top1, top2;
+    field int level;
+
+    constructor Igra new() {
+    let igrac = Glavni_lik.new(1, 1);
+    let platforma1 = Platforma.new(0, 0, 1, 1);
+    let platforma2 = Platforma.new(0, 0, 1, 1);
+    let platforma3 = Platforma.new(0, 0, 1, 1);
+    let platforma4 = Platforma.new(0, 0, 1, 1);
+    let siljak1 = Siljak.new(0, 0);
+    let siljak2 = Siljak.new(0, 0);
+    let siljak3 = Siljak.new(0, 0);
+    let siljak4 = Siljak.new(0, 0);
+    let siljak5 = Siljak.new(0, 0);
+    let siljak6 = Siljak.new(0, 0);
+    let siljak7 = Siljak.new(0, 0);
+    let top1 = Top.new(0, 0);
+    let top2 = Top.new(0, 0);
+    let cilj1 = Cilj.new(0, 0, 1);
+
+    let igra_ide = true;
+    let vrijeme = 0;
+    let level = 1;
+    do ucitajlevel1();
+    return this;
+}
+method void ucitajlevel1(){
+let level = 1;
+ do igrac.postavi(30, 180);
+    do platforma1.postavi(100, 150, 110, 4);
+    do platforma2 .postavi(110, 65, 120, 4);
+    do platforma3.postavi(270, 115, 120, 4);
+    do platforma4.postavi(395, 80, 80, 4);
+
+    do siljak1.postavi(265, 178);
+    do siljak2.postavi(340, 103);
+    do siljak3.postavi(360, 103);
+    do siljak4.postavi(205, 178);
+    do siljak5 .postavi(225, 178);
+    do siljak6 .postavi(245, 178);
+    do siljak7.postavi(380, 103);
+
+    do top1.postavi(490, 140);
+    do top2.postavi(490, 175);
+    do cilj1.postavi(440, 60, 15);
+
+    do resetSvijeta();
+return;}
+method void ucitajlevel2(){
+    let level = 2;
+    do igrac.postavi(30, 180);
+
+    do platforma1.postavi(0, 40, 120, 4);
+    do platforma2.postavi(160, 80, 90, 4);
+    do platforma3.postavi(300, 120, 90, 4);
+    do platforma4.postavi(390, 165, 80, 4);
+
+    do siljak1.postavi(130, 178);
+    do siljak2.postavi(150, 178);
+    do siljak3.postavi(250, 178);
+    do siljak4.postavi(270, 178);
+    do siljak5.postavi(190, 68);
+    do siljak6.postavi(330, 108);
+    do siljak7.postavi(420, 153);
+
+    do top1.postavi(490, 90);
+    do top2.postavi(490, 175);
+
+
+  do cilj1.postavi(40, 20, 15);
+
+    do resetSvijeta();
+
+    return;
+    
+    }
+    method void ucitajlevel3(){
+     let level = 3;
+
+    do igrac.postavi(30, 180);
+
+    do platforma1.postavi(70, 150, 65, 4);
+    do platforma2.postavi(180, 120, 60, 4);
+    do platforma3.postavi(300, 90, 55, 4);
+    do platforma4.postavi(410, 60, 55, 4);
+
+    do siljak1.postavi(95, 138);
+    do siljak2.postavi(205, 108);
+    do siljak3.postavi(320, 78);
+    do siljak4.postavi(145, 178);
+    do siljak5.postavi(255, 178);
+    do siljak6.postavi(365, 178);
+    do siljak7.postavi(430, 48);
+
+    do top1.postavi(490, 135);
+    do top2.postavi(490, 75);
+
+    do cilj1.postavi(445, 35, 15);
+
+    do resetSvijeta();
+
+    return;
+    
+    }
+
+
+
+method void resetSvijeta() {
+    do Screen.clearScreen();
+    let igra_ide = true;
+    do Screen.setColor(true);
+    do Screen.drawRectangle(0, 191, 511, 255);
+    do Output.moveCursor(0, 0);
+    do Output.printString("Vrijeme:");
+
+    do platforma1.draw();
+    do platforma2.draw();
+    do platforma3.draw();
+    do platforma4.draw();
+    do siljak1.draw();
+    do siljak2.draw();
+    do siljak3.draw();
+    do siljak4.draw();
+    do siljak5.draw();
+    do siljak6.draw();
+    do top1.reset();
+    do top2.reset();
+    do top1.draw();
+    do top2.draw();
+    do cilj1.draw();
+
+    return;
+}
+    method boolean dodirivanjeCilja(){
+     var int px, py, psize;
+    let px = igrac.getX();
+    let py = igrac.getY();
+    let psize = igrac.getsize();
+    if (cilj1.diranje(px, py, psize)) {
+        return true;
+    } 
+    return false;}
+    method boolean dodirivanjeSiljka(){
+    var int px, py, psize;
+    let px = igrac.getX();
+    let py = igrac.getY();
+    let psize = igrac.getsize();
+    if (siljak1.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak2.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak3.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak4.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak5.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak6.diranje(px, py, psize)) {
+        return true;
+    } 
+    if (siljak7.diranje(px, py, psize)) {
+        return true;
+    } 
+    return false;
+}
+    method void pobjeda(){
+    do Screen.clearScreen();
+        do Output.moveCursor(10, 20);
+        do Output.printString("POBIJEDIO SI! SVAKA CAST!");
+        do Output.moveCursor(14, 20);
+        do Output.moveCursor(12, 18);
+        do Output.printString("Pritisni R za replay");
+
+        do Output.moveCursor(14, 20);
+        do Output.printString("Vrijeme: ");
+        do Output.printInt(vrijeme);
+
+
+            while (~(Keyboard.keyPressed() = 82)) {
+            do Sys.wait(50);
+            }
+            let vrijeme = 0;
+            do ucitajlevel1();
+            return;}
+    method void gameOver() {
+     do Screen.clearScreen();
+            do Output.moveCursor(10, 25);
+            do Output.printString("IZGUBIO SI :(");
+            do Output.moveCursor(12, 18);
+            do Output.printString("Pritisni R za restart");
+
+            while (~(Keyboard.keyPressed() = 82)) {
+            do Sys.wait(50);
+            }
+            do ucitajlevel1();
+            let vrijeme = 0;
+            return;
+    }
+    method void drawTimer() {
+    do Output.moveCursor(0, 10);
+    do Output.printInt(vrijeme);
+    return;
+}
+method void nacrtajsvijet() {
+    do Screen.setColor(true);
+    do Screen.drawRectangle(0, 191, 511, 255);
+    do platforma1.draw();
+    do platforma2.draw();
+    do platforma3.draw();
+    do platforma4.draw();
+    do siljak1.draw();
+    do siljak2.draw();
+    do siljak3.draw();
+    do siljak4.draw();
+    do siljak5.draw();
+    do siljak6.draw();
+    do siljak7.draw();
+
+    do cilj1.draw();
+
+    return;
+}
+
+    method void kretanje() {
+        var char key;
+        var int px, py, psize;
+        do resetSvijeta();
+
+
+        while (igra_ide) {
+            let vrijeme = vrijeme + 1;
+            do drawTimer();
+            do nacrtajsvijet();
+            do igrac.erase();
+            do platforma1.draw();
+            do siljak1.draw();
+            let key = Keyboard.keyPressed();
+            if (key = 65) {
+            do igrac.idiLijevo();
+            }
+
+            if (key = 68) {
+            do igrac.idiDesno();
+            }
+
+            if (key = 87){
+                do igrac.skok();
+            }
+
+            if (key = 81) {
+                let igra_ide = false;
+            }
+            do igrac.gravitacija();
+            do skokNaPlatformu();
+            let px = igrac.getX();
+            let py = igrac.getY();
+            let psize = igrac.getsize();
+
+            if (dodirivanjeSiljka()) {
+            do gameOver();
+            }
+            if (top1.diranjeMetka(px, py, psize)) {
+            do gameOver(); }
+            if (top2.diranjeMetka(px, py, psize)) {
+            do gameOver();
+            }
+            
+            if (dodirivanjeCilja()) {
+
+            if (level = 1) {
+                do ucitajlevel2();
+            }
+            else {
+            if (level = 2) {
+                do ucitajlevel3();
+            }
+
+            else {
+                do pobjeda();
+            }
+    }
+}
+            do top1.update();
+            do top2.update();
+            do top1.draw();
+            do top2.draw();
+
+            do igrac.draw();
+            do Sys.wait(20);
+        
+    }
+    return;}
+
+    method void skokNaPlatformu(){
+    var int px, py, psize;
+
+    let px = igrac.getX();
+    let py = igrac.getY();
+    let psize = igrac.getsize();
+
+    if (platforma1.diranjeOdozgo(px, py, psize, igrac.getbrzinay())) {
+        do igrac.promjenapoda(platforma1.getY() - psize);
+    }
+
+    if (platforma2.diranjeOdozgo(px, py, psize, igrac.getbrzinay())) {
+        do igrac.promjenapoda(platforma2.getY() - psize);
+    }
+
+    if (platforma3.diranjeOdozgo(px, py, psize, igrac.getbrzinay())) {
+        do igrac.promjenapoda(platforma3.getY() - psize);
+    }
+
+    if (platforma4.diranjeOdozgo(px, py, psize, igrac.getbrzinay())) {
+        do igrac.promjenapoda(platforma4.getY() - psize);
+    }
+
+    return;
+}
+    
+
+
+
+
+
+    method void dispose() {
+        do igrac.dispose();
+        do siljak1.dispose();
+        do siljak2.dispose();
+        do siljak3.dispose();
+        do siljak4.dispose();
+        do siljak5.dispose();
+        do siljak6.dispose();
+        do siljak7.dispose();
+        do cilj1.dispose();
+        do platforma1.dispose();
+        do platforma2.dispose();
+        do platforma3.dispose();
+        do platforma4.dispose();
+
+        do top1.dispose();
+        do top2.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
+}

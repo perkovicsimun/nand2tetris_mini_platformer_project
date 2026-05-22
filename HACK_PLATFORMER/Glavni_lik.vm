@@ -1,0 +1,198 @@
+function Glavni_lik.new 0
+push constant 5
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push constant 10
+pop this 2
+push constant 0
+pop this 3
+push constant 0
+pop this 4
+push pointer 0
+return
+function Glavni_lik.getX 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Glavni_lik.getY 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Glavni_lik.getsize 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Glavni_lik.getbrzinay 0
+push argument 0
+pop pointer 0
+push this 3
+return
+function Glavni_lik.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Glavni_lik.erase 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 0
+push this 2
+add
+push this 1
+push this 2
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Glavni_lik.idiLijevo 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 6
+sub
+pop this 0
+push constant 0
+return
+function Glavni_lik.idiDesno 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 6
+add
+pop this 0
+push constant 0
+return
+function Glavni_lik.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Glavni_lik.skok 0
+push argument 0
+pop pointer 0
+push this 4
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 10
+neg
+pop this 3
+push constant 0
+pop this 4
+label IF_FALSE0
+push constant 0
+return
+function Glavni_lik.gravitacija 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 1
+add
+pop this 3
+push this 1
+push this 3
+add
+pop this 1
+push this 1
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop this 1
+push constant 0
+pop this 3
+label IF_FALSE0
+push this 1
+push constant 180
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 180
+pop this 1
+push constant 0
+pop this 3
+push constant 0
+not
+pop this 4
+label IF_FALSE1
+push constant 0
+return
+function Glavni_lik.reset 0
+push argument 0
+pop pointer 0
+push constant 50
+pop this 0
+push constant 180
+pop this 1
+push constant 0
+pop this 3
+push constant 0
+not
+pop this 4
+push constant 0
+return
+function Glavni_lik.postavi 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push constant 0
+pop this 3
+push constant 0
+pop this 4
+push constant 0
+return
+function Glavni_lik.promjenapoda 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+pop this 3
+push constant 0
+not
+pop this 4
+push constant 0
+return
+function Glavni_lik.zaustaviskok 0
+push argument 0
+pop pointer 0
+push constant 1
+pop this 3
+push constant 0
+return

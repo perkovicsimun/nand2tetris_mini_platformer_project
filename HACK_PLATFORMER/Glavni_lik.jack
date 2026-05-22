@@ -1,0 +1,106 @@
+class Glavni_lik {
+    field int x, y;
+    field int size;
+    field int brzinay;
+    field boolean naPodu;
+
+    constructor Glavni_lik new(int startx, int starty){
+    let x = startx;
+    let y = starty;
+    let size = 10;
+    let brzinay = 0;
+    let naPodu = false;
+    return this;
+    }
+
+    method int getX(){
+        return x;
+        }
+    method int getY(){
+        return y;
+        }
+    method int getsize(){
+        return size;
+        }
+    method int getbrzinay(){
+    return brzinay;}
+
+
+    method void draw(){
+        do Screen.setColor(true); 
+        do Screen.drawRectangle(x, y, x+size, y+size);
+        return;
+    }
+    method void erase() {
+        do Screen.setColor(false);
+        do Screen.drawRectangle(x, y, x + size, y + size);
+        return;
+    }
+   method void idiLijevo() {
+    let x = x-6;
+    return;
+}
+
+method void idiDesno() {
+    let x = x+  6;
+    return;
+}
+
+
+method void dispose() {
+    do Memory.deAlloc(this);
+    return;
+}
+method void skok() {
+    if(naPodu){
+    let brzinay = -10;
+    let naPodu = false;
+    }
+    return;
+    }
+method void gravitacija(){
+    let brzinay = brzinay + 1;
+    let y = y + brzinay;
+       if (y < 0) {
+        let y = 0;
+        let brzinay = 0;
+    }
+    if (y > 180){
+    let y = 180;
+    let brzinay = 0;
+    let naPodu = true;
+    }
+    return;
+    }
+method void reset(){
+
+    let x = 50;
+    let y = 180;
+    let brzinay = 0;
+    let naPodu = true;
+
+    return;
+}
+method void postavi(int xx, int yy) {
+
+    let x = xx;
+    let y = yy;
+
+    let brzinay = 0;
+    let naPodu = false;
+
+    return;
+}
+method void promjenapoda(int noviY){
+let y = noviY;
+let brzinay = 0;
+let naPodu = true;
+return;
+}
+method void zaustaviskok(){
+let brzinay = 1;
+return;}
+
+
+
+}

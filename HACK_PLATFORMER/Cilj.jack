@@ -1,0 +1,49 @@
+class Cilj {
+    field int x, y , r;
+
+    constructor Cilj new(int xx, int yy, int rr){
+    let x = xx;
+    let y = yy;
+    let r = rr;
+    return this;
+
+}
+
+method void draw(){
+    do Screen.setColor(true);
+    do Screen.drawCircle(x, y, r);
+    return;}
+method boolean diranje(int px, int py, int psize) {
+
+    var int lijevo, desno, gore, dole;
+
+    let lijevo = x - r;
+    let desno = x + r;
+    let gore = y - r;
+    let dole = y + r;
+
+    if ((px < desno) &
+        ((px + psize) > lijevo) &
+        (py < dole) &
+        ((py + psize) > gore)) {
+
+        return true;
+    }
+
+    return false;
+    }
+    method void postavi(int xx, int yy, int rr) {
+
+    let x = xx;
+    let y = yy;
+    let r = rr;
+
+    return;
+}
+method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+}

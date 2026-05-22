@@ -1,0 +1,92 @@
+function Cilj.new 0
+push constant 3
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push pointer 0
+return
+function Cilj.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push this 2
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+return
+function Cilj.diranje 4
+push argument 0
+pop pointer 0
+push this 0
+push this 2
+sub
+pop local 0
+push this 0
+push this 2
+add
+pop local 1
+push this 1
+push this 2
+sub
+pop local 2
+push this 1
+push this 2
+add
+pop local 3
+push argument 1
+push local 1
+lt
+push argument 1
+push argument 3
+add
+push local 0
+gt
+and
+push argument 2
+push local 3
+lt
+and
+push argument 2
+push argument 3
+add
+push local 2
+gt
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+not
+return
+label IF_FALSE0
+push constant 0
+return
+function Cilj.postavi 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push argument 3
+pop this 2
+push constant 0
+return
+function Cilj.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

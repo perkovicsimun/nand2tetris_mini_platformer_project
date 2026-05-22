@@ -1,0 +1,53 @@
+class Siljak {
+    field int x, y, sirina, visina;
+
+
+    constructor Siljak new(int xx, int yy){
+    let x = xx;
+    let y = yy;
+    let sirina = 8;
+    let visina = 8;
+
+    return this;
+    }
+    method void draw(){
+    do Screen.setColor(true);
+    do Screen.drawRectangle(x+4, y, x+6, y+2);
+    do Screen.drawRectangle(x+3, y+3, x+7, y+5);
+    do Screen.drawRectangle(x+2, y+6, x+8, y+8);
+    do Screen.drawRectangle(x+1, y+9, x+9, y+11);
+    return;
+    }
+method void postavi(int xx, int yy) {
+
+    let x = xx;
+    let y = yy;
+
+    return;
+}
+    method boolean diranje(int px, int py, int psize){
+        var int lijevo, desno, gore, dole;
+
+    let lijevo = x+ 2;
+    let desno = x + 8;
+    let gore = y + 4;
+    let dole = y + 11;
+
+      if ((px < desno) &
+            ((px + psize) > lijevo) &
+            (py < dole) &
+            ((py + psize) > gore)) {
+
+            return true;
+        }
+
+        return false;
+    }
+     method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+
+}

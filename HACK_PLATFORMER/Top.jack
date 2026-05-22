@@ -1,0 +1,70 @@
+class Top {
+    field int x, y;
+    field int timer;
+    field int cooldown;
+    field Metak metak;
+
+    constructor Top new(int startX, int startY) {
+        let x = startX;
+        let y = startY;
+        let timer = 0;
+        let cooldown = 30;
+        let metak = Metak.new();
+
+        return this;
+    }
+    method void postavi(int xx, int yy) {
+
+    let x = xx;
+    let y = yy;
+    do metak.reset();
+
+    return;
+}
+
+    method void update() {
+        let timer = timer + 1;
+
+        if ((timer > cooldown) & (~metak.jelAktivan())) {
+            do metak.pucanje(x - 5, y + 5);
+            let timer = 0;
+        }
+
+        do metak.update();
+
+        return;
+    }
+
+    method void draw() {
+        do Screen.setColor(true);
+
+        do Screen.drawRectangle(x, y, x + 12, y + 12);
+
+        do Screen.drawRectangle(x - 8, y + 4, x, y + 8);
+
+        do metak.draw();
+
+        return;
+    }
+
+    method boolean diranjeMetka(int px, int py, int psize) {
+        if (metak.diranje(px, py, psize)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    method void reset() {
+        let timer = 0;
+        do metak.reset();
+
+        return;
+    }
+
+    method void dispose() {
+        do metak.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
+}
